@@ -213,11 +213,11 @@ p  { color: var(--gray); line-height: 1.75; }
 
 /* ===== EQUIP ===== */
 .equip__grid {
-  display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
 }
 .membre-card { border-radius: var(--radius); overflow: hidden; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); }
 .membre-card__video {
-  width: 100%; aspect-ratio: 16/9;
+  width: 100%; aspect-ratio: 9/16;
   object-fit: cover; display: block; background: #111;
 }
 .membre-card__body { padding: 24px; }
@@ -332,7 +332,7 @@ p  { color: var(--gray); line-height: 1.75; }
   .navbar__cta { display: none; }
   .perque__grid { grid-template-columns: repeat(2, 1fr); }
   .serveis__grid { grid-template-columns: 1fr; }
-  .equip__grid { grid-template-columns: 1fr; }
+  .equip__grid { grid-template-columns: repeat(2, 1fr); }
   .contacte__grid { grid-template-columns: 1fr; }
   .contact-form { padding: 32px 24px; }
   .form-row { grid-template-columns: 1fr; }
