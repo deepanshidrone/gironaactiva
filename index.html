@@ -3,9 +3,536 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Girona Activa</title>
+  <title>Girona Activa | Centre d'Entrenament & Fisioteràpia</title>
+  <meta name="description" content="Centre d'entrenament personal i fisioteràpia a Girona. Equip multidisciplinari de professionals per a la teva salut i benestar." />
+  <link rel="icon" href="Images/gironaactivalog.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Girona Activa — Pròximament</h1>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="container navbar__inner">
+      <a href="#inici" class="navbar__logo">
+        <img src="Images/cropped-gironaactivalog.png" alt="Girona Activa" />
+      </a>
+      <ul class="navbar__links" id="nav-links">
+        <li><a href="#inici" class="active">Inici</a></li>
+        <li><a href="#serveis">Serveis</a></li>
+        <li><a href="#qui-som">Qui som?</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contacte">Contacte</a></li>
+      </ul>
+      <a href="#contacte" class="navbar__cta">Reserva ara</a>
+      <button class="navbar__toggle" id="nav-toggle" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="inici">
+    <div class="hero__bg" id="hero-bg"></div>
+    <div class="hero__overlay"></div>
+    <div class="container">
+      <div class="hero__content">
+        <div class="hero__tag">Centre d'Entrenament &amp; Fisioteràpia · Girona</div>
+        <h1>Entrena.<br><span>Recupera't.</span><br>Millora.</h1>
+        <p class="hero__sub">Un equip multidisciplinari de fisioterapeutes, entrenadors i nutricionistes al teu costat. Programes 100% personalitzats per assolir els teus objectius.</p>
+        <div class="hero__actions">
+          <a href="#contacte" class="btn btn--primary">Comença ara</a>
+          <a href="https://wa.me/34639582757" target="_blank" class="btn btn--outline">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Truca'ns per WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== PER QUÈ GIRONA ACTIVA ===== -->
+  <section class="section" id="perque">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-header__tag">Per què nosaltres?</span>
+        <h2>Un centre pensat per a tu</h2>
+        <p>Sigui quin sigui el teu punt de partida, tenim el programa adequat per acompanyar-te.</p>
+      </div>
+      <div class="perque__grid">
+        <div class="perque__card">
+          <div class="perque__icon">🌱</div>
+          <h3>Començas a cuidar-te</h3>
+          <p>Et guiem des del principi amb una avaluació inicial i un pla progressiu adaptat al teu nivell.</p>
+        </div>
+        <div class="perque__card">
+          <div class="perque__icon">💪</div>
+          <h3>Vida més saludable</h3>
+          <p>Integrem entrenament, nutrició i hàbits per transformar el teu estil de vida de forma sostenible.</p>
+        </div>
+        <div class="perque__card">
+          <div class="perque__icon">🩺</div>
+          <h3>Recuperació de lesions</h3>
+          <p>El nostre equip de fisioterapeutes i readaptadors treballa conjuntament per retornar-te al nivell òptim.</p>
+        </div>
+        <div class="perque__card">
+          <div class="perque__icon">🧓</div>
+          <h3>Envelliment actiu</h3>
+          <p>Programes especialitzats per mantenir la mobilitat, la força i la qualitat de vida en totes les etapes.</p>
+        </div>
+        <div class="perque__card">
+          <div class="perque__icon">🤝</div>
+          <h3>Suport integral</h3>
+          <p>Fisioterapeutes, entrenadors i nutricionistes coordinen el teu pla per maximitzar els resultats.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVEIS ===== -->
+  <section class="section section--gray" id="serveis">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-header__tag">El que oferim</span>
+        <h2>Els nostres serveis</h2>
+        <p>Solucions professionals per a la teva salut, el teu rendiment i el teu benestar.</p>
+      </div>
+      <div class="serveis__grid">
+
+        <div class="servei-card">
+          <img class="servei-card__img" src="Images/entrenament-individual.png" alt="Entrenament Personal" />
+          <div class="servei-card__body">
+            <span class="servei-card__tag">Entrenament</span>
+            <h3>Entrenament Personal i Grups Reduïts</h3>
+            <p>Programes individualitzats amb avaluació inicial, periodització setmanal i supervisió professional contínua. Sessions de 30 o 60 minuts adaptades als teus objectius.</p>
+            <a href="#contacte" class="servei-card__link">Saber-ne més →</a>
+          </div>
+        </div>
+
+        <div class="servei-card">
+          <img class="servei-card__img" src="Images/fisioterapia-esportiva.png" alt="Fisioteràpia" />
+          <div class="servei-card__body">
+            <span class="servei-card__tag">Fisioteràpia</span>
+            <h3>Fisioteràpia Esportiva i Traumatològica</h3>
+            <p>Tractament de lesions musculars, tendinopaties, problemes d'esquena i cervicals, recuperació postoperatòria i fisioteràpia per a gent gran. Atenció especialitzada i personalitzada.</p>
+            <a href="#contacte" class="servei-card__link">Saber-ne més →</a>
+          </div>
+        </div>
+
+        <div class="servei-card">
+          <img class="servei-card__img" src="Images/rehabilitacio.png" alt="Readaptació i prevenció" />
+          <div class="servei-card__body">
+            <span class="servei-card__tag">Readaptació</span>
+            <h3>Readaptació i Prevenció de Lesions</h3>
+            <p>Combinació de fisioteràpia i entrenament per retornar a l'activitat de forma segura i prevenir futures lesions. Ideal per a esportistes i persones en procés de recuperació.</p>
+            <a href="#contacte" class="servei-card__link">Saber-ne més →</a>
+          </div>
+        </div>
+
+        <div class="servei-card">
+          <img class="servei-card__img" src="Images/nutricio.png" alt="Nutrició" />
+          <div class="servei-card__body">
+            <span class="servei-card__tag">Nutrició</span>
+            <h3>Nutrició i Planificació Alimentària</h3>
+            <p>Avaluacions personalitzades, mesures antropomètriques, plans nutricionals a mida i seguiment mensual del progrés. Complementa el teu entrenament amb una alimentació òptima.</p>
+            <a href="#contacte" class="servei-card__link">Saber-ne més →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EQUIP ===== -->
+  <section class="section section--dark" id="qui-som">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-header__tag">El nostre equip</span>
+        <h2>Qui som?</h2>
+        <p>Professionals apassionats per la salut i el rendiment humà. Coneix l'equip que estarà al teu costat.</p>
+      </div>
+      <div class="equip__grid">
+
+        <div class="membre-card">
+          <video class="membre-card__video" controls preload="none" playsinline>
+            <source src="Images/Presentacio-Eze.mov" type="video/mp4" />
+            El teu navegador no suporta vídeo.
+          </video>
+          <div class="membre-card__body">
+            <div class="membre-card__name">Ezequiel Fernandez</div>
+            <div class="membre-card__role">Fundador · Entrenador Personal</div>
+          </div>
+        </div>
+
+        <div class="membre-card">
+          <video class="membre-card__video" controls preload="none" playsinline>
+            <source src="Images/Presentacio-Brian.mov" type="video/mp4" />
+            El teu navegador no suporta vídeo.
+          </video>
+          <div class="membre-card__body">
+            <div class="membre-card__name">Brian Pascual</div>
+            <div class="membre-card__role">Entrenador Personal</div>
+          </div>
+        </div>
+
+        <div class="membre-card">
+          <video class="membre-card__video" controls preload="none" playsinline>
+            <source src="Images/Presentacio-Alvaro.mov" type="video/mp4" />
+            El teu navegador no suporta vídeo.
+          </video>
+          <div class="membre-card__body">
+            <div class="membre-card__name">Álvaro Lerma</div>
+            <div class="membre-card__role">Fisioterapeuta · Readaptador</div>
+          </div>
+        </div>
+
+        <div class="membre-card">
+          <video class="membre-card__video" controls preload="none" playsinline>
+            <source src="Images/Presentacio-Olivia.mov" type="video/mp4" />
+            El teu navegador no suporta vídeo.
+          </video>
+          <div class="membre-card__body">
+            <div class="membre-card__name">Olivia Pensato</div>
+            <div class="membre-card__role">Nutricionista</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-header__tag">Preguntes freqüents</span>
+        <h2>Tens dubtes? Aquí tens les respostes</h2>
+        <p>Si no trobes el que busques, contacta'ns directament.</p>
+      </div>
+      <div class="faq__list">
+
+        <div class="faq__item">
+          <button class="faq__question">
+            Com funciona la primera visita?
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <p>La primera visita és una avaluació inicial gratuïta on coneixem els teus objectius, historial de salut i nivell físic. A partir d'aquí, dissenyem el teu pla personalitzat. Pots reservar-la via WhatsApp o formulari de contacte.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question">
+            Puc venir si tinc una lesió o sóc gran?
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <p>Absolutament. Treballem amb persones de totes les edats i condicions físiques. L'equip de fisioteràpia i readaptació s'encarregarà de dissenyar un programa adaptat a la teva situació, garantint la teva seguretat en tot moment.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question">
+            Quant temps triga a veure's resultats?
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <p>Depèn dels objectius i del punt de partida de cada persona, però la majoria de clients comencen a notar canvis significatius entre les 4 i les 8 setmanes. La constància i la combinació d'entrenament, nutrició i recuperació acceleren molt els resultats.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question">
+            Puc combinar fisioteràpia i entrenament?
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <p>Sí, i és una de les nostres grans fortaleses. El fet de tenir fisioterapeutes i entrenadors sota el mateix sostre permet una coordinació total. Molts dels nostres clients fan fisioteràpia i entrenament adaptat en paral·lel.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question">
+            Quins horaris teniu disponibles?
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <p>Obrim de dilluns a divendres de 7:00 a 13:00 i de 15:00 a 19:00. Les sessions s'organitzen per torns i s'adapten en la mesura possible a la teva disponibilitat. Contacta'ns per comprovar disponibilitat.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question">
+            Com funcionen les cancel·lacions?
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <p>Demanem un avís mínim de 24 hores per cancel·lar o canviar una sessió sense càrrec. Les cancel·lacions de darrera hora es comptabilitzen com a sessió realitzada. Ho gestionem tot de forma senzilla per WhatsApp.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question">
+            Oferiu serveis de nutrició per separat?
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <p>Sí. El servei de nutrició és independent i es pot contractar sol o complementant-lo amb entrenament o fisioteràpia. Inclou avaluació inicial, pla nutricional personalitzat i seguiment mensual.</p>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question">
+            On esteu ubicats?
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <p>Estem a Girona. Pots contactar-nos per WhatsApp al 639 58 27 57 o per correu a info@gironaactiva.com per obtenir l'adreça exacta i les indicacions per arribar-hi.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACTE ===== -->
+  <section class="section section--gray" id="contacte">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-header__tag">Contacte</span>
+        <h2>Dóna el primer pas</h2>
+        <p>Omple el formulari i et contactarem en menys de 24 hores per organitzar la teva primera visita gratuïta.</p>
+      </div>
+      <div class="contacte__grid">
+
+        <!-- FORM -->
+        <div class="contact-form">
+          <h3>Formulari de contacte</h3>
+          <p>Tots els camps marcats amb * són obligatoris.</p>
+          <form name="contacte" method="POST" data-netlify="true" id="contacte-form" novalidate>
+            <input type="hidden" name="form-name" value="contacte" />
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nom">Nom complet *</label>
+                <input type="text" id="nom" name="nom" placeholder="El teu nom" required />
+              </div>
+              <div class="form-group">
+                <label for="edat">Edat *</label>
+                <input type="number" id="edat" name="edat" placeholder="Ex: 35" min="10" max="100" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="telefon">Telèfon *</label>
+                <input type="tel" id="telefon" name="telefon" placeholder="Ex: 639 58 27 57" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Correu electrònic *</label>
+                <input type="email" id="email" name="email" placeholder="tu@email.com" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="com-conegut">Com ens has conegut? *</label>
+              <select id="com-conegut" name="com_conegut" required>
+                <option value="" disabled selected>Selecciona una opció</option>
+                <option value="recomanacio-amic">Recomanació (amic/ga, familiar)</option>
+                <option value="recomanacio-metge">Recomanació metge o clínica</option>
+                <option value="passava-davant">Passava per davant del centre</option>
+                <option value="instagram">Instagram</option>
+                <option value="google">Google</option>
+                <option value="altres">Altres</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="objectiu">Què vols aconseguir? *</label>
+              <textarea id="objectiu" name="objectiu" placeholder="Ex: perdre pes, guanyar força, recuperar una lesió, millorar el rendiment..." required></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="obstacle">Per què creus que no ho estàs aconseguint fins ara? *</label>
+              <textarea id="obstacle" name="obstacle" placeholder="Explica'ns breument la teva situació actual..." required></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="disponibilitat">Quina és la teva disponibilitat horària? *</label>
+              <input type="text" id="disponibilitat" name="disponibilitat" placeholder="Ex: matins entre setmana, caps de setmana..." required />
+            </div>
+
+            <div class="form-group">
+              <label>Quina inversió estàs disposat/da a fer en la teva salut? *</label>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="inversio" value="menys-50" required />
+                  <span>Menys de 50€/mes</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="inversio" value="50-100" />
+                  <span>Entre 50€ i 100€/mes</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="inversio" value="100-150" />
+                  <span>Entre 100€ i 150€/mes</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="inversio" value="mes-150" />
+                  <span>Més de 150€/mes</span>
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn--primary form-submit">Enviar formulari →</button>
+            <div class="form-success" id="form-success">
+              <p>✅ Missatge enviat! Et contactarem en menys de 24 hores.</p>
+            </div>
+          </form>
+        </div>
+
+        <!-- INFO -->
+        <div class="contact-info">
+          <h3>Parlem?</h3>
+          <p>Prefereixos contactar-nos directament? Aquí tens totes les opcions.</p>
+
+          <div class="contact-detail">
+            <div class="contact-detail__icon">📞</div>
+            <div class="contact-detail__text">
+              <h4>Telèfon</h4>
+              <a href="tel:+34639582757">639 58 27 57</a>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail__icon">✉️</div>
+            <div class="contact-detail__text">
+              <h4>Correu electrònic</h4>
+              <a href="mailto:info@gironaactiva.com">info@gironaactiva.com</a>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail__icon">🕐</div>
+            <div class="contact-detail__text">
+              <h4>Horaris</h4>
+              <p>Dilluns – Divendres<br>7:00 – 13:00 i 15:00 – 19:00</p>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail__icon">📍</div>
+            <div class="contact-detail__text">
+              <h4>Ubicació</h4>
+              <p>Girona</p>
+            </div>
+          </div>
+
+          <div class="contact-whatsapp">
+            <p>La forma més ràpida de contactar-nos:</p>
+            <a href="https://wa.me/34639582757" target="_blank" class="btn btn--whatsapp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Escriu-nos per WhatsApp
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div>
+          <div class="footer__logo">
+            <img src="Images/cropped-gironaactivalog.png" alt="Girona Activa" />
+          </div>
+          <p class="footer__tagline">Centre d'entrenament personal i fisioteràpia a Girona. Professionals al teu costat.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Navegació</h4>
+          <ul>
+            <li><a href="#inici">Inici</a></li>
+            <li><a href="#serveis">Serveis</a></li>
+            <li><a href="#qui-som">Qui som?</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contacte">Contacte</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Contacte</h4>
+          <ul>
+            <li><a href="tel:+34639582757">639 58 27 57</a></li>
+            <li><a href="mailto:info@gironaactiva.com">info@gironaactiva.com</a></li>
+            <li><a href="https://wa.me/34639582757" target="_blank">WhatsApp</a></li>
+            <li><a href="https://www.instagram.com/gi_activa/" target="_blank">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copy">© 2025 Girona Activa. Tots els drets reservats.</span>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/gi_activa/" target="_blank" aria-label="Instagram">◎</a>
+          <a href="https://wa.me/34639582757" target="_blank" aria-label="WhatsApp">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const toggle = document.getElementById('nav-toggle');
+    const links  = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+
+    // Close mobile nav on link click
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+
+    // FAQ accordion
+    document.querySelectorAll('.faq__question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq__item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq__item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+
+    // Contact form submission
+    const form = document.getElementById('contacte-form');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      try {
+        const res = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(data).toString() });
+        if (res.ok) {
+          form.style.display = 'none';
+          document.getElementById('form-success').style.display = 'block';
+        }
+      } catch(err) { console.error(err); }
+    });
+
+    // Active nav link on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.navbar__links a');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(s => { if (window.scrollY >= s.offsetTop - 100) current = s.id; });
+      navLinks.forEach(a => {
+        a.classList.remove('active');
+        if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+      });
+    });
+  </script>
+
 </body>
 </html>
