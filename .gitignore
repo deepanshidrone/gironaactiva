@@ -1,4 +1,4 @@
-# Videos (massa pesants per a git — optimitzar i pujar manualment)
+# Videos originals MOV (massa pesants)
 Images/*.mov
-Images/*.mp4
+images/*.mov
 .DS_Store
