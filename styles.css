@@ -288,7 +288,8 @@ p  { color: var(--gray); line-height: 1.75; }
 }
 .form-success {
   display: none;
-  background: var(--orange);
+  background: rgba(255, 145, 77, 0.15);
+  border: 1px solid rgba(255, 145, 77, 0.4);
   border-radius: 12px;
   padding: 24px 28px;
   text-align: center;
@@ -301,7 +302,7 @@ p  { color: var(--gray); line-height: 1.75; }
 .form-success p {
   font-family: 'Outfit', sans-serif;
   font-size: 1rem; font-weight: 600;
-  color: var(--dark); margin: 0;
+  color: var(--orange); margin: 0;
 }
 
 .contact-info { padding-top: 8px; }
