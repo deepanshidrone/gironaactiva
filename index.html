@@ -61,33 +61,33 @@
   <!-- ===== PER QUÈ GIRONA ACTIVA ===== -->
   <section class="section" id="perque">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <span class="section-header__tag">Per què nosaltres?</span>
         <h2>Un centre pensat per a tu</h2>
         <p>Sigui quin sigui el teu punt de partida, tenim el programa adequat per acompanyar-te.</p>
       </div>
       <div class="perque__grid">
-        <div class="perque__card">
+        <div class="perque__card reveal reveal-delay-1">
           <div class="perque__icon">🌱</div>
           <h3>Començas a cuidar-te</h3>
           <p>Et guiem des del principi amb una avaluació inicial i un pla progressiu adaptat al teu nivell.</p>
         </div>
-        <div class="perque__card">
+        <div class="perque__card reveal reveal-delay-2">
           <div class="perque__icon">💪</div>
           <h3>Vida més saludable</h3>
           <p>Integrem entrenament, nutrició i hàbits per transformar el teu estil de vida de forma sostenible.</p>
         </div>
-        <div class="perque__card">
+        <div class="perque__card reveal reveal-delay-3">
           <div class="perque__icon">🩺</div>
           <h3>Recuperació de lesions</h3>
           <p>El nostre equip de fisioterapeutes i readaptadors treballa conjuntament per retornar-te al nivell òptim.</p>
         </div>
-        <div class="perque__card">
+        <div class="perque__card reveal reveal-delay-4">
           <div class="perque__icon">🧓</div>
           <h3>Envelliment actiu</h3>
           <p>Programes especialitzats per mantenir la mobilitat, la força i la qualitat de vida en totes les etapes.</p>
         </div>
-        <div class="perque__card">
+        <div class="perque__card reveal reveal-delay-1">
           <div class="perque__icon">🤝</div>
           <h3>Suport integral</h3>
           <p>Fisioterapeutes, entrenadors i nutricionistes coordinen el teu pla per maximitzar els resultats.</p>
@@ -99,14 +99,14 @@
   <!-- ===== SERVEIS ===== -->
   <section class="section section--gray" id="serveis">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <span class="section-header__tag">El que oferim</span>
         <h2>Els nostres serveis</h2>
         <p>Solucions professionals per a la teva salut, el teu rendiment i el teu benestar.</p>
       </div>
       <div class="serveis__grid">
 
-        <div class="servei-card">
+        <div class="servei-card reveal reveal-delay-1">
           <img class="servei-card__img" src="images/entrenament-individual.png" alt="Entrenament Personal" />
           <div class="servei-card__body">
             <span class="servei-card__tag">Entrenament</span>
@@ -116,7 +116,7 @@
           </div>
         </div>
 
-        <div class="servei-card">
+        <div class="servei-card reveal reveal-delay-2">
           <img class="servei-card__img" src="images/fisioterapia-esportiva.png" alt="Fisioteràpia" />
           <div class="servei-card__body">
             <span class="servei-card__tag">Fisioteràpia</span>
@@ -126,7 +126,7 @@
           </div>
         </div>
 
-        <div class="servei-card">
+        <div class="servei-card reveal reveal-delay-3">
           <img class="servei-card__img" src="images/rehabilitacio.png" alt="Readaptació i prevenció" />
           <div class="servei-card__body">
             <span class="servei-card__tag">Readaptació</span>
@@ -136,7 +136,7 @@
           </div>
         </div>
 
-        <div class="servei-card">
+        <div class="servei-card reveal reveal-delay-4">
           <img class="servei-card__img" src="images/nutricio.png" alt="Nutrició" />
           <div class="servei-card__body">
             <span class="servei-card__tag">Nutrició</span>
@@ -153,14 +153,14 @@
   <!-- ===== EQUIP ===== -->
   <section class="section section--dark" id="qui-som">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <span class="section-header__tag">El nostre equip</span>
         <h2>Qui som?</h2>
         <p>Professionals apassionats per la salut i el rendiment humà. Coneix l'equip que estarà al teu costat.</p>
       </div>
       <div class="equip__grid">
 
-        <div class="membre-card">
+        <div class="membre-card reveal reveal-delay-1">
           <video class="membre-card__video" controls preload="none" playsinline poster="images/thumb-Eze.jpg">
             <source src="images/Presentacio-Eze.mp4" type="video/mp4" />
             El teu navegador no suporta vídeo.
@@ -171,7 +171,7 @@
           </div>
         </div>
 
-        <div class="membre-card">
+        <div class="membre-card reveal reveal-delay-2">
           <video class="membre-card__video" controls preload="none" playsinline poster="images/thumb-Brian.jpg">
             <source src="images/Presentacio-Brian.mp4" type="video/mp4" />
             El teu navegador no suporta vídeo.
@@ -182,7 +182,7 @@
           </div>
         </div>
 
-        <div class="membre-card">
+        <div class="membre-card reveal reveal-delay-3">
           <video class="membre-card__video" controls preload="none" playsinline poster="images/thumb-Alvaro.jpg">
             <source src="images/Presentacio-Alvaro.mp4" type="video/mp4" />
             El teu navegador no suporta vídeo.
@@ -193,7 +193,7 @@
           </div>
         </div>
 
-        <div class="membre-card">
+        <div class="membre-card reveal reveal-delay-4">
           <video class="membre-card__video" controls preload="none" playsinline poster="images/thumb-Olivia.jpg">
             <source src="images/Presentacio-Olivia.mp4" type="video/mp4" />
             El teu navegador no suporta vídeo.
@@ -534,6 +534,18 @@
         if (a.getAttribute('href') === '#' + current) a.classList.add('active');
       });
     });
+
+    // Scroll reveal animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // anima només un cop
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
 
 </body>
