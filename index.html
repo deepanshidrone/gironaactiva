@@ -511,16 +511,26 @@
 
     // Contact form submission
     const form = document.getElementById('contacte-form');
+    const successMsg = document.getElementById('form-success');
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
+      const submitBtn = form.querySelector('[type="submit"]');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Enviant...';
       const data = new FormData(form);
       try {
         const res = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(data).toString() });
         if (res.ok) {
-          form.style.display = 'none';
-          document.getElementById('form-success').style.display = 'block';
+          form.reset();
+          successMsg.style.display = 'block';
+          successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          setTimeout(() => { successMsg.style.display = 'none'; }, 5000);
         }
       } catch(err) { console.error(err); }
+      finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Enviar formulari →';
+      }
     });
 
     // Active nav link on scroll
