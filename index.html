@@ -522,9 +522,9 @@
         const res = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(data).toString() });
         if (res.ok) {
           form.reset();
-          successMsg.style.display = 'block';
+          successMsg.classList.add('visible');
           successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-          setTimeout(() => { successMsg.style.display = 'none'; }, 5000);
+          setTimeout(() => { successMsg.classList.remove('visible'); }, 5000);
         }
       } catch(err) { console.error(err); }
       finally {
