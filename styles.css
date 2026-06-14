@@ -86,7 +86,8 @@ p  { color: var(--gray); line-height: 1.75; }
 }
 .navbar__logo-text {
   font-family: 'Outfit', sans-serif;
-  font-weight: 800; font-size: 1.3rem; letter-spacing: 0.04em;
+  font-weight: 800; font-size: 1.3rem; letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--white); line-height: 1;
 }
 .navbar__links {
@@ -134,7 +135,8 @@ p  { color: var(--gray); line-height: 1.75; }
   font-weight: 800;
   font-size: clamp(4rem, 10vw, 7.5rem);
   color: var(--white);
-  letter-spacing: 0.03em;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   line-height: 0.9;
   margin-bottom: 20px;
 }
