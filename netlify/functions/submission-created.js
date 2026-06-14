@@ -1,24 +1,54 @@
 // Netlify event-triggered function
 // S'executa automàticament cada vegada que es rep un formulari
-// Variables d'entorn necessàries a Netlify:
-//   NOTION_TOKEN       → token de la integració de Notion
-//   NOTION_DATABASE_ID → ID de la base de dades de Notion
+// Usa el mòdul https natiu (compatible amb totes les versions de Node.js)
 
-exports.handler = async function (event) {
-  try {
-    const payload = JSON.parse(event.body).payload;
-    const d = payload.data;
+const https = require('https');
 
-    // Mapa de valors del camp "com_conegut" → etiquetes llegibles
-    const comConescut = {
-      'instagram':    'Instagram',
-      'google':       'Google',
-      'recomanacio':  'Recomanació',
-      'passant':      'Passant pel carrer',
-      'altre':        'Altre',
+function notionRequest(body) {
+  return new Promise((resolve, reject) => {
+    const data = JSON.stringify(body);
+    const options = {
+      hostname: 'api.notion.com',
+      path: '/v1/pages',
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${process.env.NOTION_TOKEN}`,
+        'Content-Type': 'application/json',
+        'Notion-Version': '2022-06-28',
+        'Content-Length': Buffer.byteLength(data),
+      },
     };
 
-    // Mapa de valors del camp "inversio" → etiquetes llegibles
+    const req = https.request(options, (res) => {
+      let responseData = '';
+      res.on('data', (chunk) => { responseData += chunk; });
+      res.on('end', () => {
+        resolve({ status: res.statusCode, body: responseData });
+      });
+    });
+
+    req.on('error', reject);
+    req.write(data);
+    req.end();
+  });
+}
+
+exports.handler = async function (event) {
+  console.log('📩 Funció iniciada');
+
+  try {
+    const parsed = JSON.parse(event.body);
+    const d = parsed.payload.data;
+    console.log('📋 Dades rebudes:', JSON.stringify(d));
+
+    const comConescut = {
+      'instagram':   'Instagram',
+      'google':      'Google',
+      'recomanacio': 'Recomanació',
+      'passant':     'Passant pel carrer',
+      'altre':       'Altre',
+    };
+
     const inversio = {
       'menys-50': 'Menys de 50€',
       '50-100':   '50 – 100€',
@@ -26,55 +56,50 @@ exports.handler = async function (event) {
       'mes-150':  'Més de 150€',
     };
 
-    const response = await fetch('https://api.notion.com/v1/pages', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${process.env.NOTION_TOKEN}`,
-        'Content-Type': 'application/json',
-        'Notion-Version': '2022-06-28',
-      },
-      body: JSON.stringify({
-        parent: { database_id: process.env.NOTION_DATABASE_ID },
-        properties: {
-          'Nom': {
-            title: [{ text: { content: d.nom || '' } }],
-          },
-          'Edat': {
-            number: parseInt(d.edat) || null,
-          },
-          'Telèfon': {
-            phone_number: d.telefon || '',
-          },
-          'Email': {
-            email: d.email || '',
-          },
-          'Com ens ha conegut': {
-            select: { name: comConescut[d.com_conegut] || d.com_conegut || '' },
-          },
-          'Objectiu': {
-            rich_text: [{ text: { content: d.objectiu || '' } }],
-          },
-          'Situació actual': {
-            rich_text: [{ text: { content: d.obstacle || '' } }],
-          },
-          'Disponibilitat': {
-            rich_text: [{ text: { content: d.disponibilitat || '' } }],
-          },
-          'Inversió mensual': {
-            select: { name: inversio[d.inversio] || d.inversio || '' },
-          },
+    const notionBody = {
+      parent: { database_id: process.env.NOTION_DATABASE_ID },
+      properties: {
+        'Nom': {
+          title: [{ text: { content: d.nom || '' } }],
         },
-      }),
-    });
+        'Edat': {
+          number: parseInt(d.edat) || null,
+        },
+        'Telèfon': {
+          phone_number: d.telefon || '',
+        },
+        'Email': {
+          email: d.email || '',
+        },
+        'Com ens ha conegut': {
+          select: { name: comConescut[d.com_conegut] || d.com_conegut || '' },
+        },
+        'Objectiu': {
+          rich_text: [{ text: { content: d.objectiu || '' } }],
+        },
+        'Situació actual': {
+          rich_text: [{ text: { content: d.obstacle || '' } }],
+        },
+        'Disponibilitat': {
+          rich_text: [{ text: { content: d.disponibilitat || '' } }],
+        },
+        'Inversió mensual': {
+          select: { name: inversio[d.inversio] || d.inversio || '' },
+        },
+      },
+    };
 
-    if (!response.ok) {
-      const error = await response.json();
-      console.error('❌ Notion API error:', JSON.stringify(error, null, 2));
-      console.error('Status:', response.status);
-      return { statusCode: 500, body: JSON.stringify(error) };
+    console.log('🚀 Enviant a Notion...');
+    const result = await notionRequest(notionBody);
+    console.log('📬 Resposta Notion status:', result.status);
+    console.log('📬 Resposta Notion body:', result.body);
+
+    if (result.status !== 200) {
+      console.error('❌ Error de Notion:', result.body);
+      return { statusCode: 500, body: result.body };
     }
 
-    console.log('✅ Nou contacte guardat a Notion:', d.nom, d.email);
+    console.log('✅ Guardat correctament a Notion');
     return { statusCode: 200, body: 'OK' };
 
   } catch (err) {
