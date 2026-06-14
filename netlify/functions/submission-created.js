@@ -69,15 +69,17 @@ exports.handler = async function (event) {
 
     if (!response.ok) {
       const error = await response.json();
-      console.error('Notion API error:', JSON.stringify(error));
+      console.error('❌ Notion API error:', JSON.stringify(error, null, 2));
+      console.error('Status:', response.status);
       return { statusCode: 500, body: JSON.stringify(error) };
     }
 
-    console.log('Nou contacte guardat a Notion:', d.nom, d.email);
+    console.log('✅ Nou contacte guardat a Notion:', d.nom, d.email);
     return { statusCode: 200, body: 'OK' };
 
   } catch (err) {
-    console.error('Error a la funció:', err.toString());
+    console.error('❌ Error inesperat:', err.message);
+    console.error('Stack:', err.stack);
     return { statusCode: 500, body: err.toString() };
   }
 };

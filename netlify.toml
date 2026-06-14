@@ -3,3 +3,12 @@
 
 [functions]
   node_bundler = "esbuild"
+
+[context.production]
+  environment = { NODE_VERSION = "18" }
+
+[context.branch-deploy]
+  environment = { NODE_VERSION = "18" }
+
+[context.deploy-preview]
+  environment = { NODE_VERSION = "18" }
