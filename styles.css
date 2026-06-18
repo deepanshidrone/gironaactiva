@@ -256,6 +256,30 @@ p  { color: var(--gray); line-height: 1.75; }
 .faq__answer p { font-size: 0.9rem; }
 
 /* ===== CONTACTE ===== */
+.valoracio-banner {
+  display: flex; gap: 24px; align-items: flex-start;
+  background: rgba(255,145,77,0.1); border: 1px solid rgba(255,145,77,0.35);
+  border-radius: 16px; padding: 28px 32px; margin-bottom: 40px;
+}
+.valoracio-banner__icon { font-size: 2rem; line-height: 1; flex-shrink: 0; }
+.valoracio-banner__body { flex: 1; }
+.valoracio-banner__header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 12px; gap: 16px; flex-wrap: wrap;
+}
+.valoracio-banner__title {
+  font-family: 'Outfit', sans-serif; font-weight: 700;
+  font-size: 1.15rem; color: var(--dark);
+}
+.valoracio-banner__preu {
+  font-family: 'Outfit', sans-serif; font-weight: 800;
+  font-size: 1.3rem; color: var(--orange);
+  background: rgba(255,145,77,0.15); border-radius: 50px;
+  padding: 4px 16px;
+}
+.valoracio-banner__body p { font-size: 0.9rem; color: var(--gray); margin-bottom: 8px; }
+.valoracio-banner__body p:last-child { margin-bottom: 0; }
+
 .contacte__grid {
   display: grid; grid-template-columns: 1.4fr 1fr; gap: 64px; align-items: start;
 }
