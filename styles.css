@@ -307,7 +307,7 @@ p  { color: var(--gray); line-height: 1.75; }
 }
 .valoracio-card__img-wrap::before {
   content: ''; position: absolute; inset: 0; z-index: 1;
-  background: linear-gradient(to right, var(--dark) 0%, transparent 50%);
+  background: linear-gradient(to right, var(--dark) 0%, var(--dark) 25%, transparent 75%);
 }
 @media (max-width: 768px) {
   .valoracio-card { grid-template-columns: 1fr; }
