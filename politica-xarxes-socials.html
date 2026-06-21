@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacitat de les Xarxes Socials | Girona Activa</title>
+  <link rel="icon" href="images/cropped-gironaactivalog.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <img src="images/cropped-gironaactivalog.png" alt="Girona Activa" />
+        <span class="navbar__logo-text">Girona Activa</span>
+      </a>
+      <ul class="navbar__links" id="nav-links">
+        <li><a href="index.html#inici">Inici</a></li>
+        <li><a href="index.html#serveis">Serveis</a></li>
+        <li><a href="index.html#qui-som">Qui som?</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="index.html#contacte">Contacte</a></li>
+      </ul>
+      <a href="index.html#contacte" class="navbar__cta">Reserva ara</a>
+      <button class="navbar__toggle" id="nav-toggle" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- CONTINGUT -->
+  <section class="section" style="padding-top: 120px;">
+    <div class="container">
+      <div class="politica__content">
+        <h1>Política de Privacitat de les Xarxes Socials</h1>
+        <p class="politica__actualitzat">Pendent d'actualització</p>
+        <div class="politica__placeholder">
+          <p>El text d'aquesta política s'afegirà properament.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div>
+          <div class="footer__logo">
+            <img src="images/cropped-gironaactivalog.png" alt="Girona Activa" />
+          </div>
+          <p class="footer__tagline">Centre d'entrenament personal i fisioteràpia a Girona.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Navegació</h4>
+          <ul>
+            <li><a href="index.html#inici">Inici</a></li>
+            <li><a href="index.html#serveis">Serveis</a></li>
+            <li><a href="index.html#qui-som">Qui som?</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="index.html#contacte">Contacte</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <a href="politica-privacitat.html">POLÍTICA DE PRIVACITAT</a>
+        <a href="politica-xarxes-socials.html">POLÍTICA DE PRIVACITAT DE LES XARXES SOCIALS</a>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copy">© 2025 Girona Activa. Tots els drets reservats.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('nav-toggle');
+    const links  = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+  </script>
+
+</body>
+</html>

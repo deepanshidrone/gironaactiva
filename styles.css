@@ -358,7 +358,24 @@ p  { color: var(--gray); line-height: 1.75; }
 .footer__col ul { display: flex; flex-direction: column; gap: 10px; }
 .footer__col a { font-size: 0.875rem; color: rgba(255,255,255,0.55); transition: color var(--transition); }
 .footer__col a:hover { color: var(--white); }
-.footer__bottom { display: flex; justify-content: space-between; align-items: center; }
+.footer__legal {
+  display: flex; gap: 24px; flex-wrap: wrap;
+  padding: 16px 0; border-top: 1px solid rgba(255,255,255,0.08);
+  margin-top: 24px;
+}
+.footer__legal a {
+  font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em;
+  color: rgba(255,255,255,0.35);
+  transition: color var(--transition);
+}
+.footer__legal a:hover { color: var(--orange); }
+.footer__bottom { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 20px; }
+
+/* ===== PÀGINES DE POLÍTICA ===== */
+.politica__content { max-width: 780px; margin: 0 auto; }
+.politica__content h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 8px; color: var(--dark); }
+.politica__actualitzat { font-size: 0.85rem; color: var(--gray); margin-bottom: 40px; }
+.politica__placeholder { background: var(--light); border-radius: 12px; padding: 40px; text-align: center; color: var(--gray); }
 .footer__copy { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
 .footer__social { display: flex; gap: 10px; }
 .footer__social a {
