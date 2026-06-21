@@ -371,6 +371,23 @@ p  { color: var(--gray); line-height: 1.75; }
 .footer__legal a:hover { color: var(--orange); }
 .footer__bottom { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 20px; }
 
+/* ===== EU BANNER ===== */
+.eu-banner {
+  background: var(--white);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 32px 0;
+}
+.eu-banner__logos {
+  display: flex; align-items: center; justify-content: center;
+  gap: 48px; flex-wrap: wrap;
+}
+.eu-banner__logos img { height: 60px; width: auto; object-fit: contain; }
+@media (max-width: 600px) {
+  .eu-banner__logos { gap: 28px; }
+  .eu-banner__logos img { height: 44px; }
+}
+
 /* ===== PÀGINES DE POLÍTICA ===== */
 .politica-section { padding-top: 120px; }
 .politica__content { max-width: 780px; margin: 0 auto; }
