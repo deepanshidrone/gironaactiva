@@ -371,6 +371,20 @@ p  { color: var(--gray); line-height: 1.75; }
 .footer__legal a:hover { color: var(--orange); }
 .footer__bottom { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 20px; }
 
+/* ===== MAPA ===== */
+.mapa__wrapper {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.3);
+}
+.mapa__wrapper iframe {
+  width: 100%; height: 460px;
+  display: block; border: none;
+}
+@media (max-width: 768px) {
+  .mapa__wrapper iframe { height: 320px; }
+}
+
 /* ===== EU BANNER ===== */
 .eu-banner {
   background: var(--white);
