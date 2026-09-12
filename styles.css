@@ -592,3 +592,33 @@ p  { color: var(--gray); line-height: 1.75; }
   cursor: pointer;
 }
 .form-check label a { color: var(--orange); text-decoration: underline; }
+
+/* ===== FOOTER CREDIT ===== */
+.footer__credit {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.3);
+}
+.footer__credit a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: rgba(255,255,255,0.4);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  transition: color var(--transition);
+}
+.footer__credit a:hover { color: var(--orange); }
+.footer__credit img {
+  height: 16px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.4;
+  transition: opacity var(--transition), filter var(--transition);
+}
+.footer__credit a:hover img {
+  filter: none;
+  opacity: 1;
+}
