@@ -111,6 +111,7 @@
       <div class="footer__legal">
         <a href="avis-legal.html">AVÍS LEGAL</a>
         <a href="politica-privacitat.html">POLÍTICA DE PRIVACITAT</a>
+        <a href="politica-cookies.html">POLÍTICA DE COOKIES</a>
         <a href="politica-xarxes-socials.html">POLÍTICA DE PRIVACITAT DE LES XARXES SOCIALS</a>
       </div>
       <div class="footer__bottom">
@@ -119,10 +120,37 @@
     </div>
   </footer>
 
+  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Avís de cookies">
+    <div class="container">
+      <div class="cookie-banner__inner">
+        <p class="cookie-banner__text">
+          Utilitzem cookies pròpies i de tercers (Google Fonts, Google Maps) per oferir-te la millor experiència. Pots acceptar-les totes o rebutjar les no essencials. Consulta la nostra <a href="politica-cookies.html">Política de cookies</a>.
+        </p>
+        <div class="cookie-banner__actions">
+          <button class="cookie-banner__btn cookie-banner__btn--reject" id="cookie-reject">Rebutjar no essencials</button>
+          <button class="cookie-banner__btn cookie-banner__btn--accept" id="cookie-accept">Acceptar tot</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script>
     const toggle = document.getElementById('nav-toggle');
     const links  = document.getElementById('nav-links');
     toggle.addEventListener('click', () => links.classList.toggle('open'));
+
+    const cookieBanner = document.getElementById('cookie-banner');
+    if (!localStorage.getItem('cookie-consent')) {
+      setTimeout(() => cookieBanner.classList.add('visible'), 800);
+    }
+    document.getElementById('cookie-accept').addEventListener('click', () => {
+      localStorage.setItem('cookie-consent', 'accepted');
+      cookieBanner.classList.remove('visible');
+    });
+    document.getElementById('cookie-reject').addEventListener('click', () => {
+      localStorage.setItem('cookie-consent', 'rejected');
+      cookieBanner.classList.remove('visible');
+    });
   </script>
 
 </body>
