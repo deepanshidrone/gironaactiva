@@ -621,19 +621,6 @@
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    // Cookie banner
-    const cookieBanner = document.getElementById('cookie-banner');
-    if (!localStorage.getItem('cookie-consent')) {
-      setTimeout(() => cookieBanner.classList.add('visible'), 800);
-    }
-    document.getElementById('cookie-accept').addEventListener('click', () => {
-      localStorage.setItem('cookie-consent', 'accepted');
-      cookieBanner.classList.remove('visible');
-    });
-    document.getElementById('cookie-reject').addEventListener('click', () => {
-      localStorage.setItem('cookie-consent', 'rejected');
-      cookieBanner.classList.remove('visible');
-    });
   </script>
 
   <!-- ===== COOKIE BANNER ===== -->
@@ -650,6 +637,21 @@
       </div>
     </div>
   </div>
+
+  <script>
+    const cookieBanner = document.getElementById('cookie-banner');
+    if (!localStorage.getItem('cookie-consent')) {
+      setTimeout(() => cookieBanner.classList.add('visible'), 800);
+    }
+    document.getElementById('cookie-accept').addEventListener('click', () => {
+      localStorage.setItem('cookie-consent', 'accepted');
+      cookieBanner.classList.remove('visible');
+    });
+    document.getElementById('cookie-reject').addEventListener('click', () => {
+      localStorage.setItem('cookie-consent', 'rejected');
+      cookieBanner.classList.remove('visible');
+    });
+  </script>
 
 </body>
 </html>
