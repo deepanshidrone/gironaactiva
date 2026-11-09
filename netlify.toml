@@ -5,10 +5,10 @@
   node_bundler = "esbuild"
 
 [context.production]
-  environment = { NODE_VERSION = "18" }
+  environment = { NODE_VERSION = "22" }
 
 [context.branch-deploy]
-  environment = { NODE_VERSION = "18" }
+  environment = { NODE_VERSION = "22" }
 
 [context.deploy-preview]
-  environment = { NODE_VERSION = "18" }
+  environment = { NODE_VERSION = "22" }

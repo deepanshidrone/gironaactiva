@@ -593,6 +593,17 @@ p  { color: var(--gray); line-height: 1.75; }
 }
 .form-check label a { color: var(--orange); text-decoration: underline; }
 
+/* ===== CAMP TRAMPA ANTISPAM (honeypot) ===== */
+/* Fora de la pantalla en lloc de display:none, perquè els bots l'omplin */
+.form-hp {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 /* ===== FOOTER CREDIT ===== */
 .footer__credit {
   display: flex;

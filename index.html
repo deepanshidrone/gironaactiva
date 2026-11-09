@@ -339,8 +339,13 @@
         <div class="contact-form">
           <h3>Formulari de contacte</h3>
           <p>Tots els camps marcats amb * són obligatoris.</p>
-          <form name="contacte" method="POST" data-netlify="true" id="contacte-form" novalidate>
+          <form name="contacte" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contacte-form" novalidate>
             <input type="hidden" name="form-name" value="contacte" />
+            <!-- Camp trampa antispam: invisible per a les persones; si un bot l'omple, Netlify descarta l'enviament -->
+            <div class="form-hp" aria-hidden="true">
+              <label for="bot-field">No omplis aquest camp</label>
+              <input type="text" id="bot-field" name="bot-field" tabindex="-1" autocomplete="off" />
+            </div>
 
             <div class="form-row">
               <div class="form-group">
